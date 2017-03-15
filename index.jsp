@@ -1,7 +1,9 @@
 <%@page import="java.io.*, java.util.*, java.text.*, net.sf.json.*, org.apache.commons.io.*"%>
 
 <%
+
 response.sendRedirect("CRM/index.jsp");	
+
 
 %>
 
@@ -18,8 +20,13 @@ response.sendRedirect("CRM/index.jsp");
 	</style>
 </HEAD>
 <body>
-hhhmm
 
+hhhmm
+<h1>LICENTA<h1>
+
+
+
+jghghjggjgg
 <script>
 
 
