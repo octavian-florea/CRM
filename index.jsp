@@ -116,7 +116,7 @@ $("#show").click(function(){
     
   </tr>
     <tr >
-    <th scope="col">Reg. Comert:</th>
+    <th scope="col">Registru Comert:</th>
     <td ></td>
   
   </tr>
