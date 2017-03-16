@@ -1,7 +1,10 @@
 <%@page import="java.io.*, java.util.*, java.text.*, net.sf.json.*, org.apache.commons.io.*"%>
 
 <%
-	
+
+response.sendRedirect("CRM/index.jsp");	
+
+
 %>
 
 <!DOCTYPE html>
@@ -228,9 +231,9 @@ $("#show").click(function(){
 </div>
 </div>
 
-</div>
-
-
-
 </body>
 </html>
+
+
+
+
