@@ -95,18 +95,17 @@ $("#show").click(function(){
 
 <div id="div1">
 <div class="container">
-<div class="col-xs-6">
+  <div class="row">
+<div class="col-xs-12 col-md-6 col-md-push-6">
  <h4>Informatii referitoare la partener</h4> 
 <table class= "table1" style="width:100%" >
   <caption>Informatii referitoare la partener</caption>
-      
-  
   <tr>
    <th scope="col">Cod Unic:</th>
    <td ></td>
   </tr>
   <tr >
-    <th scope="col">Inregistrare TVA:</th>
+    <th scope="col">Inregistrare TVA :</th>
     <td ></td>
    
   </tr>
@@ -170,7 +169,7 @@ $("#show").click(function(){
 </div>
 
 
-<div class="col-xs-6">
+<div class="col-xs-12 col-md-6 col-md-pull-6">
   <h4>Informatii referitoare la contracte</h4>
   <table class="table2" style="width:100%">
   <caption>Informatii referitoare la contracte</caption>
@@ -228,6 +227,7 @@ $("#show").click(function(){
 <br>
 </div>
 
+</div>
 </div>
 </div>
 
