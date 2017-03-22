@@ -1,62 +1,63 @@
-<%@page import="java.io.*, java.util.*, java.text.*, net.sf.json.*, org.apache.commons.io.*"%>
-
-<%
-
-response.sendRedirect("CRM/index.jsp");	
-
-
-%>
-
-<!DOCTYPE html>
 <HTML>
 <HEAD>
 	<title>Cloud ERP POS</title>
 	<%@ include file="/scripts/loadQ.jsp" %>
 	<link rel="stylesheet" href="./styles/bootstrap.min.css"/>
+  <link rel="stylesheet" href="./CRM/css1.css"/>
 	<script src="./js/jquery-3.1.1.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
-	
-	<style>
-		iframe{ width:99%;margin-left:4px;height:98%; }
-    table, th, td {
-    border: none;
-    border-collapse: collapse;
-}
- th, td {
-    padding: 5px;
-    text-align: left;
-}
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
-.table2 tr:nth-child(even){
-  background-color: #ADD8E6;
-}
-.table2 tr:nth-child(odd){
-  background-color: #f0ffff;
-}
-
-.table2 tr:hover{background-color: #4682b4}
-
-.table1 tr:nth-child(even){
-  background-color: #faebd7;
-}
-.table1 tr:nth-child(odd){
-  background-color: #fffff0;
-}
-.table1 tr:hover{background-color: #ffdab9}
-
-#div1{
-  display: none;
-}
- 
-	</style>
-
-  <script>
+  <script type="text/javascript">
   $(document).ready(function(){
 
 $("#show").click(function(){
         $("#div1").show();
     });
   });
+
+
+  google.charts.load('current', {'packages':['corechart']});
+
+      // Draw the pie chart and bar chart when Charts is loaded.
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Topping');
+        data.addColumn('number', 'Valoare');
+        data.addRows([
+          ['Telekom ', 25000],
+          ['Vodafone', 10000],
+          ['Orange', 20000],
+        
+        ]);
+
+        var piechart_options = {title:'Topul vanzarilor',
+                      backgroundColor: '#fff8dc',
+                      width:500,
+                      height:400,
+                      is3D:true,
+                      colors:['#ff1493','#8b0000','#ff4500'],
+                      chartArea:{left:100,top:50,width:'100%',height:'100%'},};
+        var piechart = new google.visualization.PieChart(document.getElementById('piechart_div'));
+        piechart.draw(data, piechart_options);
+
+        var columnchart_options = {title:'Topul vanzarilor',
+          backgroundColor: '#fff8dc',
+                       width:500,
+                       height:400,
+                       legend: 'none',
+                       colors:['#800000'],
+                      
+                        };
+                     
+        var columnchart = new google.visualization.ColumnChart(document.getElementById('columnchart_div'));
+        columnchart.draw(data, columnchart_options);
+      }
+
+
 
 </script>
 </HEAD>
@@ -95,17 +96,18 @@ $("#show").click(function(){
 
 <div id="div1">
 <div class="container">
-  <div class="row">
 <div class="col-xs-12 col-md-6 col-md-push-6">
  <h4>Informatii referitoare la partener</h4> 
 <table class= "table1" style="width:100%" >
   <caption>Informatii referitoare la partener</caption>
+      
+  
   <tr>
    <th scope="col">Cod Unic:</th>
    <td ></td>
   </tr>
   <tr >
-    <th scope="col">Inregistrare TVA :</th>
+    <th scope="col">Inregistrare TVA:</th>
     <td ></td>
    
   </tr>
@@ -115,7 +117,7 @@ $("#show").click(function(){
     
   </tr>
     <tr >
-    <th scope="col">Registru Comert:</th>
+    <th scope="col">Reg. Comert:</th>
     <td ></td>
   
   </tr>
@@ -166,6 +168,9 @@ $("#show").click(function(){
 
 </table>
 <br>
+<br>
+
+
 </div>
 
 
@@ -224,16 +229,48 @@ $("#show").click(function(){
  
 
 </table>
+<br> 
 <br>
 </div>
+<hr  width="80%" >
+<div class="row">
+   <div class="col-xs-12 col-md-6">
+<table>
+      <tr>
+        <td>
+            <div id="piechart_div" style="border: 1px solid #ccc" ></div>
+             </td> </tr></table></div> 
+           
+        <div class="col-xs-12 col-md-6">    
+<table>
+      <tr>  
+        <td>
+            <div id="columnchart_div" style="border: 1px solid #ccc"></div>
+              </td> </tr></table></div> 
+    </div>
+    <br>
+
+<hr  width="80%" >
+<br>
+<table style="width:100%">
+  <tr>
+    <th  class="table3" colspan="3" style="text-align: center">VANZARI INREGISTRATE PE CLIENTI</th>
+  </tr>
+  <tr>
+    <td class="linie">Telekom</td>
+    <td class="linie">Vodafone</td>
+    <td class="linie">Orange</td>
+  </tr>
+  <tr>
+    <td class="linie">25000</td>
+    <td class="linie">10000</td>
+    <td class="linie">20000</td>
+  </tr>
+
 
 </div>
 </div>
-</div>
+
 
 </body>
 </html>
-
-
-
-

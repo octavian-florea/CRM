@@ -1,0 +1,43 @@
+	iframe{ width:99%;margin-left:4px;height:98%; }
+    table, th, td {
+    border: none;
+    border-collapse: collapse;
+}
+ th, td {
+    padding: 5px;
+    text-align: left;
+}
+
+.table2 tr:nth-child(even){
+  background-color: #ADD8E6;
+}
+.table2 tr:nth-child(odd){
+  background-color: #f0ffff;
+}
+
+.table2 tr:hover{background-color: #4682b4}
+
+.table1 tr:nth-child(even){
+  background-color: #faebd7;
+}
+.table1 tr:nth-child(odd){
+  background-color: #fffff0;
+}
+.table1 tr:hover{background-color: #ffdab9}
+
+#div1{
+  display: none;
+}
+ 
+.linie{
+
+  border: 1px solid black;
+font-weight: bold;
+
+}
+
+.table3{
+  background-color: #008080;
+   border: 1px solid black;
+  font-style: italic;
+}
