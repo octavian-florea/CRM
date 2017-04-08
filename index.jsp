@@ -7,7 +7,16 @@
 	<script src="./js/jquery-3.1.1.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<style>
+  .bdcolor{
+    background-color: #e6e6e6;
+  }
 
+  .bord{
+        background-color: white;
+    padding: 16px;
+  }
+</style>
   <script type="text/javascript">
   $(document).ready(function(){
 
@@ -28,7 +37,7 @@ $("#show").click(function(){
         data.addColumn('string', 'Topping');
         data.addColumn('number', 'Valoare');
         data.addRows([
-          ['Telekom ', 25000],
+          ['Telekom', 25000 ],
           ['Vodafone', 10000],
           ['Orange', 20000],
         
@@ -61,7 +70,7 @@ $("#show").click(function(){
 
 </script>
 </HEAD>
-<body>
+<body class="bdcolor">
 <div class="container">
 <form role="form" class="form-horizontal">
 <h2>Va rugam introduceti datele de acces:</h2>
@@ -98,6 +107,7 @@ $("#show").click(function(){
 <div class="container">
 <div class="col-xs-12 col-md-6 col-md-push-6">
  <h4>Informatii referitoare la partener</h4> 
+ <div class="bord">
 <table class= "table1" style="width:100%" >
   <caption>Informatii referitoare la partener</caption>
       
@@ -167,6 +177,7 @@ $("#show").click(function(){
   </tr>
 
 </table>
+ </div>
 <br>
 <br>
 
@@ -176,6 +187,7 @@ $("#show").click(function(){
 
 <div class="col-xs-12 col-md-6 col-md-pull-6">
   <h4>Informatii referitoare la contracte</h4>
+  <div class="bord">
   <table class="table2" style="width:100%">
   <caption>Informatii referitoare la contracte</caption>
       
@@ -229,6 +241,7 @@ $("#show").click(function(){
  
 
 </table>
+  </div>
 <br> 
 <br>
 </div>
@@ -252,6 +265,7 @@ $("#show").click(function(){
 
 <hr  width="80%" >
 <br>
+<div class="bord">
 <table style="width:100%">
   <tr>
     <th  class="table3" colspan="3" style="text-align: center">VANZARI INREGISTRATE PE CLIENTI</th>
@@ -266,7 +280,8 @@ $("#show").click(function(){
     <td class="linie">10000</td>
     <td class="linie">20000</td>
   </tr>
-
+</table>
+</div>
 
 </div>
 </div>
