@@ -1,7 +1,6 @@
 <HTML>
 <HEAD>
 	<title>Cloud ERP POS</title>
-	<%@ include file="/scripts/loadQ.jsp" %>
 	<link rel="stylesheet" href="./styles/bootstrap.min.css"/>
   <link rel="stylesheet" href="./CRM/css1.css"/>
 	<script src="./js/jquery-3.1.1.min.js"></script>
@@ -15,6 +14,10 @@
   .bord{
         background-color: white;
     padding: 16px;
+     box-shadow: 10px 10px 5px #888888;
+  }
+  .shadow{
+     box-shadow: 10px 10px 5px #888888;
   }
 </style>
   <script type="text/javascript">
@@ -251,14 +254,14 @@ $("#show").click(function(){
 <table>
       <tr>
         <td>
-            <div id="piechart_div" style="border: 1px solid #ccc" ></div>
+            <div id="piechart_div" class="shadow" style="border: 1px solid #ccc" ></div>
              </td> </tr></table></div> 
            
         <div class="col-xs-12 col-md-6">    
 <table>
       <tr>  
         <td>
-            <div id="columnchart_div" style="border: 1px solid #ccc"></div>
+            <div id="columnchart_div" class="shadow" style="border: 1px solid #ccc"></div>
               </td> </tr></table></div> 
     </div>
     <br>
@@ -285,7 +288,15 @@ $("#show").click(function(){
 
 </div>
 </div>
+<!-- aici am incercat sa facem un select in pagina sa vedem daca ne iese
+si apoi sa continuam si la restul. tabela clienti am creat-o noi in sqlLog community -->
+<sql:setDataSource var="snapshot" driver="com.mysql.jdbc.Driver"
+     url="jdbc:mysql://localhost/TEST"
+     user="root"  password=" "/>
+<sql:query dataSource="${snapshot}" var="result">
+   SELECT * FROM clienti WHERE COD_CLIENT= 234;
 
+</sql:query>
 
 </body>
 </html>
